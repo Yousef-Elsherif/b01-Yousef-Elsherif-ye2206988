@@ -1,0 +1,145 @@
+/* learn how we can detect screen sizes using media query */
+
+/* different break point */
+
+/* my default is small screen */
+
+/* use variables */
+:root {
+    --bg-color: white;
+    --text-color: black;
+    --primary-color: blue;
+    --btn-color: orange;
+    --highlight: red;
+    /* color-scheme: light; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header h1 {
+    text-align: center;
+    border-bottom: 1px solid var(--highlight);
+    padding: 1rem;
+}
+
+header h1 span {
+    color: var(--highlight);
+}
+
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav ul li {
+    padding: 0.2rem;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+
+}
+
+nav ul li a:hover {
+    color: var(--highlight);
+    text-decoration: underline;
+}
+
+:root:has(#theme:checked) {
+    --bg-color: black;
+    --text-color: white;
+    /* color-scheme: dark; */
+}
+
+/* container */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+
+    color: white;
+    padding: 0.5rem;
+    flex: 1;
+    /* flex-grow: 1;*/
+}
+
+footer {
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.btn-buy {
+    background-color: var(--btn-color);
+    padding: 0.2rem 1rem;
+    color: white;
+    border-radius: 15px;
+    border: none;
+}
+
+.sub-img {
+    height: 40vh;
+    width: auto;
+}
+
+.title {
+    text-align: center;
+}
+
+
+/* big screen */
+@media screen and (min-width: 500px) {
+
+
+    .main-header {
+        display: flex;
+        flex: 1;
+    }
+
+
+}
+
+/*  */
+
+@media screen and (min-width: 600px) {
+
+    .main-header {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header h1 {
+        border-right: 1px solid var(--highlight);
+        border-bottom: none;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+
+}
