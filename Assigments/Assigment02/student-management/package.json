@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "chai": "^5.2.0",
+    "mocha": "^11.1.0",
+    "sinon": "^19.0.2"
+  },
+  "scripts": {
+  "test": "mocha --timeout 999999s **/*.spec.js"
+}
+
+}
