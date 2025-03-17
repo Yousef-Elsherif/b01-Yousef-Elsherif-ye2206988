@@ -10,6 +10,7 @@
   },
   "scripts": {
   "test": "mocha --timeout 999999s **/*.spec.js"
-}
+},
+"main": "app.js"
 
 }
