@@ -144,15 +144,15 @@ input[type=submit]:hover {
 
 .recipes {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
   justify-items: center;
+  gap: 10px;
 }
 
 .recipe-card{
-  max-width: 420px;
+  max-width: 400px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10px;
-  margin-bottom: 30px;
   padding: 10px;
   border-radius: 10px;
 }

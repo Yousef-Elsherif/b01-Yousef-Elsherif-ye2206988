@@ -1,5 +1,6 @@
 {
   "type": "module",
+  "main": "app.js",
   "dependencies": {
     "prompt-sync": "^4.2.0"
   },
@@ -9,8 +10,6 @@
     "sinon": "^19.0.2"
   },
   "scripts": {
-  "test": "mocha --timeout 999999s **/*.spec.js"
-},
-"main": "app.js"
-
+    "test": "mocha --timeout 999999s **/*.spec.js"
+  }
 }
