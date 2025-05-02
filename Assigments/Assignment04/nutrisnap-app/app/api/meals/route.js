@@ -1,34 +1,27 @@
-import { NextResponse } from 'next/server';
-import { readFile, writeFile } from 'fs/promises';
-import path from 'path';
+import { readMeals, writeMeals } from "@/lib/meals";
 
-const mealsPath = path.join(process.cwd(), 'data', 'meals.json');
-
-async function readMeals() {
-  try {
-    const data = await readFile(mealsPath, 'utf-8');
-    return JSON.parse(data);
-  } catch {
-    return [];
-  }
-}
-
-async function saveMeals(meals) {
-  await writeFile(mealsPath, JSON.stringify(meals, null, 2));
-}
-
-// GET /api/meals
 export async function GET() {
   const meals = await readMeals();
-  return NextResponse.json(meals);
+  return Response.json(meals);
 }
 
-// POST /api/meals
-export async function POST(req) {
-  const newMeal = await req.json();
+export async function POST(request) {
+  const meal = await request.json();
+  if (
+    !meal.title || !Array.isArray(meal.tags) || !meal.calories ||
+    !meal.satisfaction
+  ) {
+    return Response.json({ error: "Invalid meal data" }, { status: 400 });
+  }
+
   const meals = await readMeals();
-  newMeal.id = Date.now().toString();
+  const newMeal = {
+    id: Date.now(),
+    userId: 1,
+    ...meal,
+    date: new Date().toISOString(),
+  };
   meals.push(newMeal);
-  await saveMeals(meals);
-  return NextResponse.json(newMeal, { status: 201 });
+  await writeMeals(meals);
+  return Response.json(newMeal, { status: 201 });
 }

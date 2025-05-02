@@ -1,46 +1,23 @@
-import { NextResponse } from 'next/server';
-import { readFile, writeFile } from 'fs/promises';
-import path from 'path';
+import { readMeals, writeMeals } from "@/lib/meals";
 
-const mealsPath = path.join(process.cwd(), 'data', 'meals.json');
-
-async function readMeals() {
-  try {
-    const data = await readFile(mealsPath, 'utf-8');
-    return JSON.parse(data);
-  } catch {
-    return [];
-  }
-}
-
-async function saveMeals(meals) {
-  await writeFile(mealsPath, JSON.stringify(meals, null, 2));
-}
-
-// POST /api/meals/:id/rate
 export async function POST(request, { params }) {
   const { id } = params;
   const { rating } = await request.json();
+
+  if (typeof rating !== "number" || rating < 1 || rating > 5) {
+    return Response.json({ error: "Rating must be a number from 1 to 5." }, { status: 400 });
+  }
+
   const meals = await readMeals();
+  const meal = meals.find(m => m.id == id);
+  if (!meal) return Response.json({ error: "Meal not found" }, { status: 404 });
 
-  const meal = meals.find((m) => m.id == id);
-
-  if (!meal) {
-    return NextResponse.json({ error: 'Meal not found' }, { status: 404 });
-  }
-
-  if (typeof rating !== 'number' || rating < 1 || rating > 5) {
-    return NextResponse.json({ error: 'Invalid rating (must be 1–5)' }, { status: 400 });
-  }
-
-  // Create ratings array if not exist
-  if (!meal.ratings) {
-    meal.ratings = [];
-  }
-
+  meal.ratings = meal.ratings || [];
   meal.ratings.push(rating);
 
-  await saveMeals(meals);
+  const avg = meal.ratings.reduce((a, b) => a + b, 0) / meal.ratings.length;
+  meal.satisfaction = Math.round(avg);
 
-  return NextResponse.json({ message: 'Rating added successfully', meal });
+  await writeMeals(meals);
+  return Response.json({ message: "Rating added", average: avg.toFixed(2) });
 }

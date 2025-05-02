@@ -55,7 +55,21 @@
     "calories": 370,
     "description": "Whole grain bread with tuna, mayo, and lettuce.",
     "satisfaction": 3,
-    "date": "2025-04-13T13:00:00Z",
+    "date": "2025-05-02T17:42:20.739Z",
     "image": "https://images.pexels.com/photos/1600713/pexels-photo-1600713.jpeg"
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "title": "Avocado Toast",
+    "tags": [
+      "vegetarian",
+      "breakfast"
+    ],
+    "calories": 320,
+    "description": "Sourdough bread topped with smashed avocado, olive oil, and chili flakes.",
+    "satisfaction": 5,
+    "date": "2025-05-02T17:42:51.147Z",
+    "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
   }
 ]
