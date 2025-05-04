@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Meal {
+  id           Int      @id @default(autoincrement())
+  userId       Int
+  title        String
+  calories     Int
+  description  String
+  satisfaction Int
+  date         DateTime
+  image        String
+  tags         Tag[]    @relation("MealTags")
+}
+
+model Tag {
+  id    Int    @id @default(autoincrement())
+  name  String
+  meals Meal[] @relation("MealTags")
+}

@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL") // Set your database URL in .env
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Meal {
+  id           Int    @id @default(autoincrement())
+  userId       Int
+  title        String
+  calories     Int
+  satisfaction Int
+  date         String
+  image        String
+  description  String
+  tags         Tag[]  @relation("MealTags")
+}
+
+model Tag {
+  id    Int    @id @default(autoincrement())
+  name  String @unique // Mark name as unique
+  meals Meal[] @relation("MealTags")
+}

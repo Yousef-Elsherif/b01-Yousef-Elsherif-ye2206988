@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "title": "Grilled Chicken Salad",
+    "tags": [
+      "high-protein",
+      "lunch"
+    ],
+    "calories": 450,
+    "description": "Grilled chicken breast with lettuce, cherry tomatoes, and light dressing.",
+    "satisfaction": 4,
+    "date": "2025-04-15T12:00:00Z",
+    "image": "https://www.maebells.com/wp-content/uploads/2024/06/Grilled-Chicken-Caesar-Salad-14.jpg"
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "title": "Beef Stir Fry",
+    "tags": [
+      "high-protein",
+      "dinner",
+      "asian"
+    ],
+    "calories": 600,
+    "description": "Beef strips stir-fried with bell peppers, onions, and soy sauce.",
+    "satisfaction": 4,
+    "date": "2025-04-14T18:45:00Z",
+    "image": "https://www.allrecipes.com/thmb/hwJEcGlPLTAMhmrYArcBf3DlqvE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc()/228823-quick-beef-stir-fry-DDMFS-4x3-1f79b031d3134f02ac27d79e967dfef5.jpg"
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "title": "Fruit Smoothie",
+    "tags": [
+      "snack",
+      "drink",
+      "vegetarian"
+    ],
+    "calories": 220,
+    "description": "A mix of banana, strawberries, and almond milk blended into a smoothie.",
+    "satisfaction": 5,
+    "date": "2025-04-15T16:10:00Z",
+    "image": "https://images.pexels.com/photos/434295/pexels-photo-434295.jpeg"
+  },
+  {
+    "id": 5,
+    "userId": 1,
+    "title": "Tuna Sandwich",
+    "tags": [
+      "quick",
+      "protein",
+      "lunch"
+    ],
+    "calories": 370,
+    "description": "Whole grain bread with tuna, mayo, and lettuce.",
+    "satisfaction": 3,
+    "date": "2025-05-02T17:42:20.739Z",
+    "image": "https://images.pexels.com/photos/1600713/pexels-photo-1600713.jpeg"
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "title": "Avocado Toast",
+    "tags": [
+      "vegetarian",
+      "breakfast"
+    ],
+    "calories": 320,
+    "description": "Sourdough bread topped with smashed avocado, olive oil, and chili flakes.",
+    "satisfaction": 5,
+    "date": "2025-05-02T17:42:51.147Z",
+    "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
+  }
+]
