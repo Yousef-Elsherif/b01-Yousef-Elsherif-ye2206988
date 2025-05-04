@@ -46,7 +46,7 @@ export default function EditMealPage() {
 
     if (res.ok) {
       alert('Meal updated!');
-      router.push('/meals');
+      router.push('/');
     } else {
       alert('Error updating meal');
     }
@@ -58,9 +58,9 @@ export default function EditMealPage() {
     <>
       <nav>
         <a href="/">Home</a>
-        <a href="/meals">Meals</a>
-        <a href="/meals/add">Add Meal</a>
-        <a href="/meals/summary">Summary</a>
+        <a href="/">Meals</a>
+        <a href="/add">Add Meal</a>
+        <a href="/summary">Summary</a>
       </nav>
 
       <div className="container">
@@ -80,3 +80,4 @@ export default function EditMealPage() {
     </>
   );
 }
+

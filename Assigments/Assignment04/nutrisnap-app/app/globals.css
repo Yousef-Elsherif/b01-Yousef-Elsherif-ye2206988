@@ -182,3 +182,45 @@ body {
     background-color: #007bff;
     color: white;
   }
+  .filter-dropdown {
+    width: 250px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .date-filter-btn {
+    padding: 10px;
+    margin-bottom: 15;
+    margin-top: 0;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .date-filter-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .reset-filter-btn {
+    padding: 10px;
+    margin-bottom: 15;
+    margin-top: 0;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .reset-filter-btn:hover {
+    background-color: #c0392b;
+  }

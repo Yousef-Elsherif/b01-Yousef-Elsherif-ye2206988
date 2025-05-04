@@ -14,9 +14,9 @@ export default function SummaryPage() {
     <>
       <nav>
         <a href="/">Home</a>
-        <a href="/meals">Meals</a>
-        <a href="/meals/add">Add Meal</a>
-        <a href="/meals/summary">Summary</a>
+        <a href="/">Meals</a>
+        <a href="/add">Add Meal</a>
+        <a href="/summary">Summary</a>
       </nav>
 
       <div className="container">
