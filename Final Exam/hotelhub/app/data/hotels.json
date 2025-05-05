@@ -1,0 +1,32 @@
+[
+    {
+        "id": "hotel-1",
+        "name": "Sunrise Suites",
+        "location": "Miami",
+        "image": "https://tse4.mm.bing.net/th?id=OIP.tBHP3NW44V6MJL_Ztn7IwQHaEo&pid=Api"
+    },
+    {
+        "id": "hotel-2",
+        "name": "Oceanview Inn",
+        "location": "San Diego",
+        "image": "https://tse3.mm.bing.net/th?id=OIP.C_6iIPHdI9DsjynDDmBWjgHaE6&pid=Api"
+    },
+    {
+        "id": "hotel-3",
+        "name": "Mountain Lodge",
+        "location": "Denver",
+        "image": "https://tse1.mm.bing.net/th?id=OIP.ViUAuItOO54F6HlshFw-fQHaFI&pid=Api"
+    },
+    {
+        "id": "hotel-4",
+        "name": "City Center Hotel",
+        "location": "New York",
+        "image": "https://tse3.mm.bing.net/th?id=OIP.g5Kw4jETUs7bzJLwLnwRswHaE8&pid=Api"
+    },
+    {
+        "id": "hotel-5",
+        "name": "Lakeside Resort",
+        "location": "Seattle",
+        "image": "https://tse1.mm.bing.net/th?id=OIP.ip_SVkpX-dsJOMxRhBiMCAHaE8&pid=Api"
+    }
+]
