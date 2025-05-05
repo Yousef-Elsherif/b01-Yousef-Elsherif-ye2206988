@@ -4,7 +4,7 @@ import { getHotelById } from '../../actions/get-hotel-by-id';
 import { toggleRoomAvailability } from '../../actions/update-room-status';
 import { useParams } from 'next/navigation';
 
-export default function HotelDetailsPage() {
+export default function Rooms() {
   const { id } = useParams();
   const [hotel, setHotel] = useState(null);
 
